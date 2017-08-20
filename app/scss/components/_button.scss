@@ -1,0 +1,33 @@
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 30%;
+  top: 25%;
+  width: 30%;
+  background-color: rgba(241,241,241,0.8);
+
+
+}
+.modalContent {
+
+  display: flex;
+  justify-content: space-around;
+  align-item: center;
+
+}
+
+.btn {
+  border-radius: 4px;
+  border: none;
+  padding: 1.5rem 2rem;
+  font-size: 1rem;
+  margin: 1rem 0;
+  color: white;
+}
+.btnSub {
+  background-color: red;
+}
+.btnCan {
+  background-color: green;
+}

@@ -1,0 +1,58 @@
+article {
+  display: -webkit-flex;
+  display: flex;
+
+}
+
+.task-list {
+  flex-shrink: 0;
+  position: relative;
+  width: $task-width;
+  min-height: 500px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-right: 2px solid red;
+
+
+h3, .task-total, .list-add {
+  padding-left: 1rem;
+  padding-right: 1rem;
+} 
+
+  background-color: white;
+}
+
+.list-items {
+  padding-left: 1rem;
+  line-height: 1.7rem;
+  cursor: pointer;
+
+  
+}
+.close {
+    float: right;
+    visibility: hidden;
+    &::after {
+      clear: both;
+    }
+}
+.list-item {
+  padding-left: 2rem;
+}
+.fa-folder-open, .fa-file-o, .fa-plus {
+  padding-right: .5rem;
+}
+.list-add {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-top: 1rem;
+  border-top: 2px solid red;
+}
+
+.item-title:hover {
+  .close{
+    visibility: visible;
+  }
+  
+}

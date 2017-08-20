@@ -1,0 +1,27 @@
+.task-detail {
+  flex-grow: 1;
+  min-width: $task-width;
+  padding-top: 1rem;
+
+  background-color: lightgreen;
+}
+.detail-title {
+  position: relative;
+  border-bottom: 2px solid red;
+}
+.detail-date {
+  border-bottom: 2px solid red;
+}
+.detail-title, .detail-date, .detail-description {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+}
+.fa-check-square-o {
+  position: absolute;
+  right: .4rem;
+}
+.fa-pencil-square-o {
+  position: absolute;
+  right: 1.8rem;
+}
