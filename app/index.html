@@ -1,106 +1,93 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-  <title>TODO</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="css/main.css">
-
-  <!-- icon -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <title>TODO</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
+
 <body>
-
-  <header>
-    <h2>GTD Tools</h2>
-  </header>
-  
-  <article class="main">
-    <div class="task-list">
-      <h3>所有任务（$data）</h3>
-
-
-      <div class="task-total">
-        <p>分类列表</p>
-        <ul class="list-items" id="tasklist">
-          <li>
-            <div class="itme-title">
-              <i class="fa fa-folder-open"></i><span>毕业设计 ($data)</span><i class="close">&times;</i>
-        
+    <header>
+        <h2>GTD Tools</h2>
+    </header>
+    <article>
+        <div class="task-list">
+            <h3>所有任务（$data）</h3>
+            <div class="task-total">
+                <p>分类列表</p>
+                <ul class="list-items" id="tasklist">
+                    <li>
+                        <div class="item-title">
+                            <i class="fa fa-folder-open"></i><span>毕业设计 ($data)</span><i class="close">&times;</i>
+                        </div>
+                        <ul class="list-item">
+                            <li><i class="fa fa-file-o"></i><span>原理解析 ($data)</span></li>
+                            <li><i class="fa fa-file-o"></i><span>仿真图 ($data)</span></li>
+                            <li><i class="fa fa-file-o"></i><span>论文 ($data)</span></li>
+                        </ul>
+                    </li>
+                    <li>
+                        
+                        <div class="item-title">
+                            <i class="fa fa-folder-open"></i><span>读书计划 ($data)</span><i class="close">&times;</i>
+                        </div>
+                        <ul class="list-item">
+                            <!-- <li><i class="fa fa-file-o"></i><span>You Dont Know JS</span></li> -->
+                            <!-- <li><i class="fa fa-file-o"></i><span>现代前端技术详解</span></li> -->
+                            <!-- <li><i class="fa fa-file-o"></i><span>未来简史</span></li> -->
+                            <li><i class="fa fa-file-o"></i><span>前端技术 ($data)</span></li>
+                            <li><i class="fa fa-file-o"></i><span>文学 ($data)</span></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="item-title">
+                            <i class="fa fa-folder-open"></i><span>运动 ($data)</span><i class="close">&times;</i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-title">
+                            <i class="fa fa-folder-open"></i><span>学习 ($data)</span><i class="close">&times;</i>
+                        </div>
+                    </li>
+                </ul>
             </div>
-            <ul class="list-item">
-             
-              <li><i class="fa fa-file-o"></i><span>原理解析 ($data)</span></li>
-              <li><i class="fa fa-file-o"></i><span>仿真图 ($data)</span></li>
-              <li><i class="fa fa-file-o"></i><span>论文 ($data)</span></li>
-            </ul>
-
-          </li>
-          <li>
-            <div class="item-title">
-              <i class="fa fa-folder-open"></i><span>读书计划 ($data)</span><i class="close">&times;</i>
-              
-            </div>
-            <ul class="list-item">
-              <!-- <li><i class="fa fa-file-o"></i><span>You Dont Know JS</span></li> -->
-              <!-- <li><i class="fa fa-file-o"></i><span>现代前端技术详解</span></li> -->
-              <!-- <li><i class="fa fa-file-o"></i><span>未来简史</span></li> -->
-              <li><i class="fa fa-file-o"></i><span>前端技术 ($data)</span></li>
-              <li><i class="fa fa-file-o"></i><span>文学 ($data)</span></li>
-            </ul>
-          </li>
-          <li>
-            <div class="item-title">
-              <i class="fa fa-folder-open"></i><span>运动 ($data)</span><i class="close">&times;</i>
-              
-            </div>
-          </li>
-          <li>
-            <div class="item-title">
-              <i class="fa fa-folder-open"></i><span>学习 ($data)</span><i class="close">&times;</i>
-              
-            </div>
-          </li>
-        </ul>
-      </div>
-
-      <h3 class="list-add"><i class="fa fa-plus"></i><span>新增分类</span></h3>
-    </div>
-
-    <div class="task-states">
-      <nav>
-        <div class="nav-states">
-          <h3>所有</h3>
-          <h3>未完成</h3>
-          <h3>已完成</h3>
+            <h3 id="addTask" class="list-add"><i class="fa fa-plus"></i><span>新增分类</span>
+      </h3>
         </div>
-        
-        <div class="task-state">
-          <ul>
-            <li><span>buck-boost电路原理</span></li>
-            <li><span>变换器参数设置</span></li>
-            <li><span>蓄电池充电，放电原理</span></li>
-            <li><span>仿真电路图</span></li>
-          </ul>
+        <div class="task-states">
+            <nav>
+                <div class="nav-states">
+                    <h3>所有</h3>
+                    <h3>未完成</h3>
+                    <h3>已完成</h3>
+                </div>
+                <div class="task-state">
+                    <ul>
+                        <li><span>buck-boost电路原理</span></li>
+                        <li><span>变换器参数设置</span></li>
+                        <li><span>蓄电池充电，放电原理</span></li>
+                        <li><span>仿真电路图</span></li>
+                    </ul>
+                </div>
+                <div class="task-add">
+                    <h3><i class="fa fa-plus"></i><span>新增任务</span></h3>
+                </div>
+            </nav>
         </div>
-        <div class="task-add">
-          <h3><i class="fa fa-plus"></i><span>新增任务</span></h3>
+        <div class="task-detail">
+            <h3 class="detail-title">todo6 <i class="fa fa-check-square-o"></i><i class="fa fa-pencil-square-o"></i></h3>
+            <h4 class="detail-date">任务日期：$data</h4>
+            <p class="detail-description">任务细节</p>
         </div>
-      </nav>
-    </div>
-
-    <div class="task-detail">
-      <h3 class="detail-title">todo6 <i class="fa fa-check-square-o"></i><i class="fa fa-pencil-square-o"></i></h3>
-      
-      <h4 class="detail-date">任务日期：$data</h4>
-      
-      <p class="detail-description">任务细节</p>
-    </div>
-  </article>
-
-
-<script src="js/task-list.js"></script>
-<script src="js/add.js"></script>
+    </article>
+    <script src="js/task-list.js"></script>
+    <script src="js/add.js"></script>
 </body>
+
 </html>

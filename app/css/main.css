@@ -409,7 +409,8 @@ article {
   float: right;
   visibility: hidden; }
   .close::after {
-    clear: both; }
+    content: '';
+    clear: right; }
 
 .list-item {
   padding-left: 2rem; }
@@ -422,9 +423,10 @@ article {
   bottom: 0;
   width: 100%;
   padding-top: 1rem;
-  border-top: 2px solid red; }
+  border-top: 2px solid red;
+  cursor: pointer; }
 
-.item-title:hover .close {
+.item-title:hover .close, .item-title:focus .close {
   visibility: visible; }
 
 .task-states {
@@ -541,4 +543,34 @@ form {
   form #task-submit {
     background-color: green; }
   form #task-cancer {
+    background-color: red; }
+
+.new-task {
+  position: fixed;
+  z-index: 1;
+  top: 30%;
+  left: 30%;
+  max-width: 25%;
+  min-height: 16%;
+  padding: .5rem 1rem;
+  background-color: #62a8f6; }
+  .new-task div:last-child {
+    display: flex;
+    justify-content: space-between;
+    margin-top: .8rem; }
+  .new-task label {
+    padding: .5rem;
+    display: block; }
+  .new-task input {
+    width: 100%;
+    padding: .3rem;
+    font-size: 1rem; }
+  .new-task button {
+    padding: .4rem;
+    color: white;
+    border: none;
+    width: 30%; }
+  .new-task .confirm-btn {
+    background-color: green; }
+  .new-task .cancer-btn {
     background-color: red; }

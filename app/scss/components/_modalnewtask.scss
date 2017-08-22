@@ -1,0 +1,41 @@
+.new-task {
+  position: fixed;
+  // display: none;
+  z-index: 1;
+  top: 30%;
+  left: 30%;
+  max-width: 25%;
+  min-height: 16%;
+  
+  padding: .5rem 1rem;
+
+  div:last-child {
+    display: flex;
+    justify-content: space-between;
+    margin-top: .8rem;
+  }
+  label {
+    padding: .5rem;
+    display: block;
+  }
+  input {
+    width: 100%;
+    padding: .3rem;
+    font-size: 1rem;
+  }
+
+  button {
+    padding: .4rem;
+    color: white;
+    border: none;
+    width: 30%;
+  }
+  .confirm-btn {
+    background-color: green;
+  }
+  .cancer-btn {
+    background-color: red;
+  }
+
+  background-color: rgb(98, 168, 246);
+}
