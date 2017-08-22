@@ -38,6 +38,7 @@
       btnSub.innerHTML = `确认删除${taskContent}项目?`;
       btnCan.innerHTML = '取消';
     }
+    //
     let removeTaskEle = close.parentElement.parentElement;
 
     btnSub.onclick = function() {
@@ -47,8 +48,6 @@
     btnCan.onclick = function() {
       modal.style.display = 'none';
     }
-
-
     
   }
 
