@@ -78,7 +78,7 @@
         })(...tags[i]);
 
     }
-    document.body.appendChild(addEle);
+    // document.body.appendChild(addEle);
     //add `label` value 
     // document.body.onload = function() {
 
