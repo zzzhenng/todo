@@ -10,7 +10,8 @@
     ];
 
     const attributes = [
-        [{
+        [
+            {
                 'for': 'task-title'
             },
             {
@@ -19,7 +20,8 @@
                 'placeholder': 'please input string'
             }
         ],
-        [{
+        [
+            {
                 'for': 'task-deadline'
             },
             {
@@ -27,17 +29,17 @@
                 'type': 'date'
             }
         ],
-        [{
+        [
+            {
                 'for': 'task-description'
             },
             {
                 'id': 'task-description',
-                'rows': '10',
-                'cols': '30',
                 'placeholder': 'please input details'
             }
         ],
-        [{
+        [
+            {
                 'type': 'submit',
                 'id': 'task-submit',
                 'value': '提交'
@@ -50,41 +52,31 @@
         ]
     ];
 
-    
-    //use to add attribute to form tags--function
-    // function addAttribute() {
-    //     for (let i = 0; i < attributes.length; i++) {
-    //         attribute = attributes[i];
-
-    //         for (var key of Object.keys(attribute)) {
-    //             tagName.setAttribute(key, attribute[key]);
-    //         }
-    //     }
-    // }
     //add `tags` and `attribute`
     for (let i = 0; i < tags.length; i++) {
 
-        //use to add 'div' and inner tags--function
-    (function addTags(nameDiv, nameLable, nameTag, tag1, tag2, tag3) {
-        // console.log(tag1 + ' ' + typeof(tag1));
-        nameDiv = document.createElement(tag1);
-        addEle.appendChild(nameDiv);
-        nameLable = document.createElement(tag2);
-        nameTag = document.createElement(tag3);
-        nameDiv.appendChild(nameLable);
-        nameDiv.appendChild(nameTag);
+        
+        (function addTags(nameDiv, nameLable, nameTag, tag1, tag2, tag3) {
+            //use to add 'div' and inner tags--function
+            nameDiv = document.createElement(tag1);
+            addEle.appendChild(nameDiv);
+            nameLable = document.createElement(tag2);
+            nameTag = document.createElement(tag3);
+            nameDiv.appendChild(nameLable);
+            nameDiv.appendChild(nameTag);
 
-        let ele = [nameLable, nameTag];
+            //add attribute to tags
+            let ele = [nameLable, nameTag];
 
-        for (let j = 0; j < attributes[i].length; j++) {
-            attribute = attributes[i][j];
+            for (let j = 0; j < attributes[i].length; j++) {
+                attribute = attributes[i][j];
 
-            for (var key of Object.keys(attribute)) {
-                ele[j].setAttribute(key, attribute[key]);
+                for (var key of Object.keys(attribute)) {
+                    ele[j].setAttribute(key, attribute[key]);
+                }
             }
-        }
-    })(...tags[i]);
-    
+        })(...tags[i]);
+
     }
     document.body.appendChild(addEle);
     //add `label` value 
@@ -92,13 +84,13 @@
 
 
     var labelEles = document.getElementsByTagName('label');
-    var labelContent = ['title', 'date', 'content'];
+    var labelContent = ['标题', '完成日期', '任务内容'];
     for (let i = 0; i < labelEles.length; i++) {
         labelEle = labelEles[i];
         console.log(labelEle);
         labelEle.innerHTML = labelContent[i];
-    // }
-}
-    
+        
+    }
+
 
 })();

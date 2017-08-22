@@ -1,0 +1,54 @@
+form {
+  position: fixed;
+  z-index: 1;
+  left: 30%;
+  top: 13%;
+  width: 30%;
+  min-height: 60%;
+  background-color: rgba(174,129,255,0.8);
+
+  padding: 2rem;
+  font-size: 1rem;
+
+  label {
+    display: block;
+  }
+  input {
+    width: 80%;
+    padding: .5rem;
+    font-size: 1rem;
+    // margin-left: 2rem;
+  }
+  div {
+    padding-top: 5%;
+    margin: auto;
+  }
+
+  #task-description {
+    width: 80%;
+    min-height: 10rem;
+    font-size: 1rem;
+  }
+
+  div:last-child {
+    display: flex;
+    // width: 50%;
+    justify-content: space-between;
+  }
+  input[type=submit] {
+    width: 30%;
+    border: none;
+    padding: .5rem;
+    color: white;
+  }
+  #task-submit {
+    background-color: green;
+  }
+  #task-cancer {
+    background-color: red;
+  }
+
+
+}
+
+

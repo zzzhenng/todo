@@ -373,7 +373,7 @@ template {
   box-sizing: border-box; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 16px; }
 
 body {
   margin: 0;
@@ -390,7 +390,7 @@ article {
 .task-list {
   flex-shrink: 0;
   position: relative;
-  width: 30rem;
+  width: 300px;
   min-height: 500px;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -430,7 +430,7 @@ article {
 .task-states {
   flex-shrink: 0;
   position: relative;
-  width: 30rem;
+  width: 300px;
   padding-top: 1rem;
   padding-bottom: 1rem;
   background-color: grey; }
@@ -455,7 +455,7 @@ article {
 
 .task-detail {
   flex-grow: 1;
-  min-width: 30rem;
+  min-width: 300px;
   padding-top: 1rem;
   background-color: lightgreen; }
 
@@ -506,3 +506,39 @@ article {
 
 .btnCan {
   background-color: green; }
+
+form {
+  position: fixed;
+  z-index: 1;
+  left: 30%;
+  top: 13%;
+  width: 30%;
+  min-height: 60%;
+  background-color: rgba(174, 129, 255, 0.8);
+  padding: 2rem;
+  font-size: 1rem; }
+  form label {
+    display: block; }
+  form input {
+    width: 80%;
+    padding: .5rem;
+    font-size: 1rem; }
+  form div {
+    padding-top: 5%;
+    margin: auto; }
+  form #task-description {
+    width: 80%;
+    min-height: 10rem;
+    font-size: 1rem; }
+  form div:last-child {
+    display: flex;
+    justify-content: space-between; }
+  form input[type=submit] {
+    width: 30%;
+    border: none;
+    padding: .5rem;
+    color: white; }
+  form #task-submit {
+    background-color: green; }
+  form #task-cancer {
+    background-color: red; }
